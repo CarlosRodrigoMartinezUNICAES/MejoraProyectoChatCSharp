@@ -11,7 +11,7 @@
         "projectName": "TcpServerChatCSharp",
         "projectPath": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
         "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\obj\\",
+        "outputPath": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -43,11 +43,27 @@ namespace TcpServerChatCSharp
 
         private void ServerForm_Load(object sender, EventArgs e)
         {
+            string PINServer = SolicitarPIN();
             btnEnviar.Enabled = false;
             server = new SimpleTcpServer(txtIP.Text);
             server.Events.ClientConnected += Events_ClienteConectado;
             server.Events.ClientDisconnected += Events_ClienteDesconectado;
             server.Events.DataReceived += Events_DatosRecibidos;
+        }
+
+        private string SolicitarPIN()
+        {
+            using (PINForm pinForm = new PINForm())
+            {
+                if (pinForm.ShowDialog() == DialogResult.OK)
+                {
+                    return pinForm.PIN;
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
         }
 
         private void Events_DatosRecibidos(object? sender, DataReceivedFromClientEventArgs e)

@@ -1,6 +1,6 @@
-﻿namespace TcpClientChatCSharp
+﻿namespace TcpServerChatCSharp
 {
-    partial class UsuarioForm
+    partial class PINForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,72 +29,48 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            txtUsuario = new TextBox();
-            btnAceptar = new Button();
             txtPIN = new TextBox();
-            label2 = new Label();
+            btnAceptar = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(24, 13);
+            label1.Location = new Point(6, 5);
             label1.Name = "label1";
-            label1.Size = new Size(165, 15);
+            label1.Size = new Size(141, 15);
             label1.TabIndex = 0;
-            label1.Text = "Ingresa un nombre de usuario";
-            label1.Click += label1_Click;
+            label1.Text = "Ingrese PIN para la sesion";
             // 
-            // txtUsuario
+            // txtPIN
             // 
-            txtUsuario.Location = new Point(24, 37);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(165, 23);
-            txtUsuario.TabIndex = 1;
+            txtPIN.Location = new Point(6, 23);
+            txtPIN.Name = "txtPIN";
+            txtPIN.Size = new Size(141, 23);
+            txtPIN.TabIndex = 1;
             // 
             // btnAceptar
             // 
-            btnAceptar.Location = new Point(128, 132);
+            btnAceptar.Location = new Point(43, 52);
             btnAceptar.Name = "btnAceptar";
-            btnAceptar.Size = new Size(75, 23);
+            btnAceptar.Size = new Size(62, 23);
             btnAceptar.TabIndex = 2;
             btnAceptar.Text = "Aceptar";
             btnAceptar.UseVisualStyleBackColor = true;
             btnAceptar.Click += btnAceptar_Click;
             // 
-            // txtPIN
+            // PINForm
             // 
-            txtPIN.Location = new Point(55, 98);
-            txtPIN.Name = "txtPIN";
-            txtPIN.Size = new Size(100, 23);
-            txtPIN.TabIndex = 3;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(24, 78);
-            label2.Name = "label2";
-            label2.Size = new Size(161, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Contraseña (PIN) del servidor";
-            label2.Click += label2_Click;
-            // 
-            // UsuarioForm
-            // 
-            AcceptButton = btnAceptar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(213, 167);
-            Controls.Add(label2);
-            Controls.Add(txtPIN);
+            ClientSize = new Size(151, 84);
+            ControlBox = false;
             Controls.Add(btnAceptar);
-            Controls.Add(txtUsuario);
+            Controls.Add(txtPIN);
             Controls.Add(label1);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "UsuarioForm";
-            StartPosition = FormStartPosition.CenterParent;
-            Text = "Bienvenido";
+            Name = "PINForm";
+            SizeGripStyle = SizeGripStyle.Hide;
+            Text = "PIN";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -102,9 +78,7 @@
         #endregion
 
         private Label label1;
-        private TextBox txtUsuario;
-        private Button btnAceptar;
         private TextBox txtPIN;
-        private Label label2;
+        private Button btnAceptar;
     }
 }

@@ -5,10 +5,14 @@ namespace TcpClientChatCSharp
 {
     public partial class ClienteForm : Form
     {
-        public ClienteForm(string nombreUsuario)
+        public string NombreUsuario { get; private set; }
+        public string PINSala { get; private set; }
+
+        public ClienteForm(string nombreUsuario, string PINSala)
         {
             InitializeComponent();
-            txtInfo.Text += $"Bienvenido, {nombreUsuario}!{Environment.NewLine}";
+            txtInfo.Text += $"Bienvenido, {nombreUsuario} {PINSala} !{Environment.NewLine}";
+            NombreUsuario = nombreUsuario;
         }
 
         SimpleTcpClient client;
@@ -20,7 +24,7 @@ namespace TcpClientChatCSharp
                 if (!string.IsNullOrEmpty(txtMensaje.Text))
                 {
                     client.Send(txtMensaje.Text);
-                    txtInfo.Text += $"Yo: {txtMensaje.Text}{Environment.NewLine}";
+                    txtInfo.Text += $"{NombreUsuario} (Yo): {txtMensaje.Text}{Environment.NewLine}";
                     txtMensaje.Text = string.Empty;
                 }
             }
