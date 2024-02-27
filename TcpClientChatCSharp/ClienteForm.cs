@@ -5,9 +5,10 @@ namespace TcpClientChatCSharp
 {
     public partial class ClienteForm : Form
     {
-        public ClienteForm()
+        public ClienteForm(string nombreUsuario)
         {
             InitializeComponent();
+            txtInfo.Text += $"Bienvenido, {nombreUsuario}!{Environment.NewLine}";
         }
 
         SimpleTcpClient client;
@@ -22,6 +23,15 @@ namespace TcpClientChatCSharp
                     txtInfo.Text += $"Yo: {txtMensaje.Text}{Environment.NewLine}";
                     txtMensaje.Text = string.Empty;
                 }
+            }
+        }
+
+        private void txtMensaje_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Evita que se escriba el carácter de retorno de carro en el cuadro de texto
+                btnEnviar.PerformClick(); // Simula un clic en el botón "Enviar"
             }
         }
 
@@ -46,6 +56,7 @@ namespace TcpClientChatCSharp
             client.Events.Disconnected += Events_Desconectado;
             client.Events.DataReceived += Events_DatosRecibidos;
             btnEnviar.Enabled = false;
+            txtMensaje.KeyPress += txtMensaje_KeyPress;
         }
 
         private void Events_Conectado(object? sender, EventArgs e)

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "isQ8yHq/IHKlcYV+KS5Fx1FTRbolq08bFy0Wgr4Gd4I1glM1PSfwUUVD2YIuVTFuXzQ2ijpORiTKrTzQA0R4vQ==",
+  "dgSpecHash": "Mv6Wu5WYoXdOvy7eQs+6+YYLMXVzTFkNAtO7mx4JqKHvW5nUanXjWno8nfDz3NtLNnh1mYxx6JdJboTXewC2pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Juan\\source\\repos\\TcpClientChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
+  "projectFilePath": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Juan\\.nuget\\packages\\supersimpletcp\\2.1.0.12\\supersimpletcp.2.1.0.12.nupkg.sha512"
+    "C:\\Users\\Carlos\\.nuget\\packages\\supersimpletcp\\2.1.0.12\\supersimpletcp.2.1.0.12.nupkg.sha512"
   ],
   "logs": []
 }

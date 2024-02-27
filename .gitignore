@@ -1,0 +1,15 @@
+# Ignorar archivos generados por Visual Studio
+.vs/
+bin/
+obj/
+
+# Ignorar archivos generados por Rider
+.idea/
+
+# Ignorar archivos de respaldo de Visual Studio Code
+.vscode/
+
+# Ignorar archivos de NuGet
+*.nuget.props
+*.nuget.targets
+.vs/TcpClientChatCSharp/FileContentIndex/*.vsidx

@@ -41,19 +41,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Juan\\.nuget\\packages\\": {}
+    "C:\\Users\\Carlos\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Juan\\source\\repos\\TcpClientChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
       "projectName": "TcpServerChatCSharp",
-      "projectPath": "C:\\Users\\Juan\\source\\repos\\TcpClientChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
-      "packagesPath": "C:\\Users\\Juan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Juan\\source\\repos\\TcpClientChatCSharp\\TCPServerChatCSharp\\obj\\",
+      "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\TcpServerChatCSharp.csproj",
+      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TCPServerChatCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Juan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -73,6 +73,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -103,7 +108,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

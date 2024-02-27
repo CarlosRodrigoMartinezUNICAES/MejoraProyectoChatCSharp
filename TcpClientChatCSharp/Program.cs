@@ -11,7 +11,27 @@ namespace TcpClientChatCSharp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ClienteForm());
+            string nombreUsuario = SolicitarNombreUsuario();
+
+            if (!string.IsNullOrEmpty(nombreUsuario))
+            {
+                Application.Run(new ClienteForm(nombreUsuario));
+            }
+        }
+
+        private static string SolicitarNombreUsuario()
+        {
+            using (UsuarioForm usuarioForm = new UsuarioForm())
+            {
+                if (usuarioForm.ShowDialog() == DialogResult.OK)
+                {
+                    return usuarioForm.NombreUsuario;
+                }
+                else
+                {
+                    return "Anónimo";
+                }
+            }
         }
     }
 }
