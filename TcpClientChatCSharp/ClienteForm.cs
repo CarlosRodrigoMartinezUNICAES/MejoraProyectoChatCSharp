@@ -90,6 +90,8 @@ namespace TcpClientChatCSharp
             this.Invoke((MethodInvoker)delegate
             {
                 txtInfo.Text += $"Desconectado.{Environment.NewLine}";
+                btnConectar.Enabled = true; // Reactivar el botón de conectar
+                btnEnviar.Enabled = false; // Desactivar el botón de enviar
             });
             
         }
