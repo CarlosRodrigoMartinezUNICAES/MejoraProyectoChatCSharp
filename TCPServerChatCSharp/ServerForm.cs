@@ -19,11 +19,14 @@ namespace TcpServerChatCSharp
         SimpleTcpServer server;
         private System.Windows.Forms.Timer timer;
 
+        public object PINServer { get; private set; }
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             // Llamada al metodo Start() del server
             server.Start();
             txtInfo.Text += $"Iniciando...{Environment.NewLine}";
+            txtInfo.Text += $"Su PIN es: {PINServer}{Environment.NewLine}";
             btnIniciar.Enabled = false;
             btnEnviar.Enabled = true;
             timer.Start();
@@ -43,7 +46,8 @@ namespace TcpServerChatCSharp
 
         private void ServerForm_Load(object sender, EventArgs e)
         {
-            string PINServer = SolicitarPIN();
+            string pinServer = SolicitarPIN();
+            PINServer = pinServer;
             btnEnviar.Enabled = false;
             server = new SimpleTcpServer(txtIP.Text);
             server.Events.ClientConnected += Events_ClienteConectado;
@@ -70,7 +74,17 @@ namespace TcpServerChatCSharp
         {
             this.Invoke((MethodInvoker)delegate
             {
-                txtInfo.Text += $"{e.IpPort}: {Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+                txtInfo.Text += $"{Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+
+                // Reenviar mensaje a todos los clientes excepto al cliente que lo envió originalmente
+                foreach (string clienteIpPort in lstUsuarios.Items)
+                {
+                    if (clienteIpPort != e.IpPort)
+                    {
+                        server.Send(clienteIpPort, e.Data);
+                    }
+                }
+
             });
             
         }

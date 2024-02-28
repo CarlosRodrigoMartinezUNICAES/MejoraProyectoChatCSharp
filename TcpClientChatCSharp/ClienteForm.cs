@@ -1,5 +1,6 @@
 using SimpleTcp;
 using System.Text;
+using System.Windows.Forms;
 
 namespace TcpClientChatCSharp
 {
@@ -23,7 +24,8 @@ namespace TcpClientChatCSharp
             {
                 if (!string.IsNullOrEmpty(txtMensaje.Text))
                 {
-                    client.Send(txtMensaje.Text);
+                    string mensajeCompleto = $"{NombreUsuario}: {txtMensaje.Text}";
+                    client.Send(mensajeCompleto);
                     txtInfo.Text += $"{NombreUsuario} (Yo): {txtMensaje.Text}{Environment.NewLine}";
                     txtMensaje.Text = string.Empty;
                 }
@@ -68,6 +70,8 @@ namespace TcpClientChatCSharp
             this.Invoke((MethodInvoker)delegate
             {
                 txtInfo.Text += $"Conectado.{Environment.NewLine}";
+                string usuario = $"Hola {NombreUsuario}!";
+                client.Send(usuario);
             });
             
         }
@@ -76,7 +80,7 @@ namespace TcpClientChatCSharp
         {
             this.Invoke((MethodInvoker)delegate
             {
-                txtInfo.Text += $"Server: {Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
+                txtInfo.Text += $"{Encoding.UTF8.GetString(e.Data)}{Environment.NewLine}";
             });
             
         }
