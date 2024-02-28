@@ -70,6 +70,7 @@
             Controls.Add(label1);
             Name = "PINForm";
             SizeGripStyle = SizeGripStyle.Hide;
+            StartPosition = FormStartPosition.CenterParent;
             Text = "PIN";
             ResumeLayout(false);
             PerformLayout();
