@@ -38,3 +38,4 @@ C:\Users\Carlos\Source\Repos\MejoraProyectoChatCSharp\TcpClientChatCSharp\obj\De
 C:\Users\Carlos\Source\Repos\MejoraProyectoChatCSharp\TcpClientChatCSharp\obj\Debug\net8.0-windows\TcpClientChatCSharp.genruntimeconfig.cache
 C:\Users\Carlos\Source\Repos\MejoraProyectoChatCSharp\TcpClientChatCSharp\obj\Debug\net8.0-windows\ref\TcpClientChatCSharp.dll
 C:\Users\Carlos\Source\Repos\MejoraProyectoChatCSharp\TcpClientChatCSharp\obj\Debug\net8.0-windows\TcpClientChatCSharp.UsuarioForm.resources
+C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TcpClientChatCSharp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll

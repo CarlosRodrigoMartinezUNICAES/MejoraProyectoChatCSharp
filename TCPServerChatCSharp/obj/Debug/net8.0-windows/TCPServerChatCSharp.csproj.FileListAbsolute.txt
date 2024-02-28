@@ -38,3 +38,4 @@ C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TCPServerChatCSharp\obj\De
 C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TCPServerChatCSharp\obj\Debug\net8.0-windows\TcpServerChatCSharp.pdb
 C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TCPServerChatCSharp\obj\Debug\net8.0-windows\TcpServerChatCSharp.genruntimeconfig.cache
 C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TCPServerChatCSharp\obj\Debug\net8.0-windows\ref\TcpServerChatCSharp.dll
+C:\Users\Carlos\source\repos\MejoraProyectoChatCSharp\TCPServerChatCSharp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll

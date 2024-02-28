@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "BouncyCastle.Cryptography/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SuperSimpleTcp/2.1.0.12": {
         "type": "package",
         "compile": {
@@ -14,6 +27,26 @@
     }
   },
   "libraries": {
+    "BouncyCastle.Cryptography/2.3.0": {
+      "sha512": "IaVIiYxZLaBulveGDRUx/pBoW/Rc8QeXGF5u2E8xL8RWhVKCgfmtX9NUyGRbnSqnbFQU2zyP3MkXIdH+jUuQBw==",
+      "type": "package",
+      "path": "bouncycastle.cryptography/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "bouncycastle.cryptography.2.3.0.nupkg.sha512",
+        "bouncycastle.cryptography.nuspec",
+        "lib/net461/BouncyCastle.Cryptography.dll",
+        "lib/net461/BouncyCastle.Cryptography.xml",
+        "lib/net6.0/BouncyCastle.Cryptography.dll",
+        "lib/net6.0/BouncyCastle.Cryptography.xml",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
+        "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
+        "packageIcon.png"
+      ]
+    },
     "SuperSimpleTcp/2.1.0.12": {
       "sha512": "kh+zb+ezZcxT1nSReby2Q3lKt/ZM7qvS5hfUIB3kw51Nj4DzqOK6IrTTQl4VU2FwqB2cffxA/1f5t7wPbmHbeA==",
       "type": "package",
@@ -37,6 +70,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "BouncyCastle.Cryptography >= 2.3.0",
       "SuperSimpleTcp >= 2.1.0.12"
     ]
   },
@@ -46,11 +80,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\TcpClientChatCSharp.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\TcpClientChatCSharp.csproj",
       "projectName": "TcpClientChatCSharp",
-      "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\TcpClientChatCSharp.csproj",
+      "projectPath": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\TcpClientChatCSharp.csproj",
       "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\obj\\",
+      "outputPath": "C:\\Users\\Carlos\\source\\repos\\MejoraProyectoChatCSharp\\TcpClientChatCSharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -84,6 +118,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "BouncyCastle.Cryptography": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
           "SuperSimpleTcp": {
             "target": "Package",
             "version": "[2.1.0.12, )"
