@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TcpClientChatCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebb2e35e2cfe47c25c91f4941f8771cbd86973b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d852954e8915cd14b5167f79387f7a6eeee96214")]
 [assembly: System.Reflection.AssemblyProductAttribute("TcpClientChatCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TcpClientChatCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

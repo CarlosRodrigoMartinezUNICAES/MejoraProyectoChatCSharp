@@ -1,5 +1,6 @@
 using SimpleTcp;
 using System;
+using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
@@ -8,9 +9,12 @@ namespace TcpServerChatCSharp
 {
     public partial class ServerForm : Form
     {
+        private SoundPlayer sonido;
         public ServerForm()
         {
             InitializeComponent();
+            string rutaSonido = Path.Combine(Application.StartupPath, "ui", "server.wav");
+            sonido = new SoundPlayer(rutaSonido);
             timer = new System.Windows.Forms.Timer();
             timer.Interval = 1000; // 1000 milisegundos = 1 segundo
             timer.Tick += Timer_Tick;
@@ -30,6 +34,7 @@ namespace TcpServerChatCSharp
             btnIniciar.Enabled = false;
             btnEnviar.Enabled = true;
             timer.Start();
+            sonido.Play();
         }
 
         private void Timer_Tick(object sender, EventArgs e)

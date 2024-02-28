@@ -1,4 +1,5 @@
 using SimpleTcp;
+using System.Media;
 using System.Text;
 using System.Windows.Forms;
 
@@ -8,10 +9,13 @@ namespace TcpClientChatCSharp
     {
         public string NombreUsuario { get; private set; }
         public string PINSala { get; private set; }
+        private SoundPlayer sonido;
 
         public ClienteForm(string nombreUsuario, string PINSala)
         {
             InitializeComponent();
+            string rutaSonido = Path.Combine(Application.StartupPath, "ui", "client.wav");
+            sonido = new SoundPlayer(rutaSonido);
             txtInfo.Text += $"Bienvenido, {nombreUsuario} {PINSala} !{Environment.NewLine}";
             NombreUsuario = nombreUsuario;
         }
@@ -48,6 +52,7 @@ namespace TcpClientChatCSharp
                 client.Connect();
                 btnEnviar.Enabled = true;
                 btnConectar.Enabled = false;
+                sonido.Play();
             }
             catch (Exception ex)
             {
